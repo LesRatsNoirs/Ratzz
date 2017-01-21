@@ -45,6 +45,40 @@ public class TesteMovimentacao : MonoBehaviour {
                 }
             }
         }
+        //
+        setRenderOrder();
     }
 
+    public void setRenderOrder() {
+
+        float y = transform.position.y -5;
+
+
+
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+
+        SpriteRenderer srPlayer = GetComponent<SpriteRenderer>();
+
+        GameObject buildingObject = collision.gameObject;
+        SpriteRenderer srBuilding = buildingObject.GetComponent<SpriteRenderer>();
+        float positionY = srBuilding.transform.position.y;
+
+        //TODO Verificar o pivot se influencia
+        //topo
+        //Bottom
+        if (transform.position.y > positionY) {
+            srPlayer.sortingOrder = srBuilding.sortingOrder - 1;
+        } else if(transform.position.y > positionY) { // TOP
+            srPlayer.sortingOrder = srBuilding.sortingOrder - 1; 
+        } else {
+            srPlayer.sortingOrder = srBuilding.sortingOrder + 1;
+        }
+    }
 }
