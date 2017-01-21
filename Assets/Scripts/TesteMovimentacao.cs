@@ -45,22 +45,10 @@ public class TesteMovimentacao : MonoBehaviour {
                 }
             }
         }
-        //
-        setRenderOrder();
+       
     }
+   
 
-    public void setRenderOrder() {
-
-        float y = transform.position.y -5;
-
-
-
-
-    }
-
-    private void OnTriggerStay2D(Collider2D collision) {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
