@@ -8,15 +8,21 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
     public static int Score = 0;
+    public float espera = 3;
 
     public void Awake() {
         this.getInstance();
 
     }
 
+    void Start() {
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+    }
+
     public static void Scoring(int score) {
         Score += score;
-        Debug.Log("");
+        Debug.Log("To com: " + Score + " pontos.");
     }
 
     // Singleton
