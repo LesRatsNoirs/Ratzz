@@ -7,10 +7,16 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
+    public static int Score = 0;
 
     public void Awake() {
         this.getInstance();
 
+    }
+
+    public static void Scoring(int score) {
+        Score += score;
+        Debug.Log("");
     }
 
     // Singleton
