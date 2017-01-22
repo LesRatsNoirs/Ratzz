@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: fefa47db78068a340975202ddd42a727
+timeCreated: 1485106546
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Main_lado_1
+    21300002: Main_lado_2
+    21300004: Esca_lado_1
+    21300006: Esca_lado_2
+    21300008: Clar_lado_1
+    21300010: Clar_lado_2
+    21300012: Baix_lado_1
+    21300014: Baix_lado_2
+    21300016: Main_frente_1
+    21300018: Main_frente_2
+    21300020: Main_tras_1
+    21300022: Main_tras_2
+    21300024: Esca_frente_1
+    21300026: Esca_frente_2
+    21300028: Esca_tras_1
+    21300030: Esca_tras_2
+    21300032: Clar_frente_1
+    21300034: Clar_frente_2
+    21300036: Clar_tras_1
+    21300038: Clar_tras_2
+    21300040: Baix_frente_1
+    21300042: Baix_frente_2
+    21300044: Baix_tras_1
+    21300046: Baix_tras_2
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Main_lado_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2589
+        width: 327
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5899898, y: 0.34486347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main_lado_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2269
+        width: 327
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5969121, y: 0.3977507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Esca_lado_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1880
+        width: 327
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5588396, y: 0.44006082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Esca_lado_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1553
+        width: 327
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5415339, y: 0.4294833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clar_lado_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1201
+        width: 327
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5484562, y: 0.39069915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clar_lado_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 867
+        width: 327
+        height: 321
+      alignment: 9
+      pivot: {x: 0.53461146, y: 0.33781114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Baix_lado_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 461
+        width: 327
+        height: 339
+      alignment: 9
+      pivot: {x: 0.4550052, y: 0.31971404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Baix_lado_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 40
+        width: 327
+        height: 339
+      alignment: 9
+      pivot: {x: 0.4723109, y: 0.36979356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main_frente_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 2596
+        width: 233
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5074126, y: 0.3096053}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main_frente_2
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 2254
+        width: 233
+        height: 321
+      alignment: 9
+      pivot: {x: 0.48798275, y: 0.33781227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main_tras_1
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 2590
+        width: 233
+        height: 321
+      alignment: 9
+      pivot: {x: 0.46369508, y: 0.3272344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main_tras_2
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 2258
+        width: 233
+        height: 321
+      alignment: 9
+      pivot: {x: 0.52684236, y: 0.3413375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Esca_frente_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1887
+        width: 217
+        height: 321
+      alignment: 9
+      pivot: {x: 0.4796335, y: 0.41328862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Esca_frente_2
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1546
+        width: 217
+        height: 321
+      alignment: 9
+      pivot: {x: 0.4994715, y: 0.44011024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Esca_tras_1
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1887
+        width: 217
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5093899, y: 0.40658388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Esca_tras_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1556
+        width: 217
+        height: 321
+      alignment: 9
+      pivot: {x: 0.51434976, y: 0.39652583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clar_frente_1
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1197
+        width: 203
+        height: 321
+      alignment: 9
+      pivot: {x: 0.43345425, y: 0.40108883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clar_frente_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 856
+        width: 203
+        height: 321
+      alignment: 9
+      pivot: {x: 0.49506247, y: 0.40368614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clar_tras_1
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1202
+        width: 219
+        height: 321
+      alignment: 9
+      pivot: {x: 0.50270617, y: 0.40108883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clar_tras_2
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 852
+        width: 219
+        height: 321
+      alignment: 9
+      pivot: {x: 0.5224927, y: 0.42471227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Baix_frente_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 446
+        width: 222
+        height: 363
+      alignment: 9
+      pivot: {x: 0.5622454, y: 0.3312794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Baix_frente_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 44
+        width: 222
+        height: 363
+      alignment: 9
+      pivot: {x: 0.47365576, y: 0.3312794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Baix_tras_1
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 454
+        width: 222
+        height: 363
+      alignment: 9
+      pivot: {x: 0.53426987, y: 0.3369825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Baix_tras_2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 39
+        width: 222
+        height: 363
+      alignment: 9
+      pivot: {x: 0.50163174, y: 0.35409155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
