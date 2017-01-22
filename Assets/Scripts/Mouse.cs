@@ -77,31 +77,26 @@ public class Mouse   : MonoBehaviour {
         if (distance <= range && distance > stop) {
             transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
             player.AddMouseOnPlayer(this);
-
-            /* USAR EM ULTIMO CASO
-            if(transform.position.x > playerObject.transform.position.x) {
-                GetComponent<SpriteRenderer>().flipX = true;
-                GetComponent<SpriteRenderer>().flipY = true;
-            }
-            else {
-                GetComponent<SpriteRenderer>().flipX = true;
-                GetComponent<SpriteRenderer>().flipY = false;
-
-            }
-            */
-
-
-
+            
             isInPlayer = true;
         }
 
 
         float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        //transform.rotation =
-        //  Quaternion.Slerp(transform.rotation,
-        //                    Quaternion.Euler(0, 0, targetAngle),
-        //                        turnSpeed * Time.deltaTime);
-    }
+        
+        //TODO: Place animation for mouse
+
+        if(targetAngle > 45 && targetAngle < 135) {
+            //Debug.Log("Mouse UP");
+            
+        } else if (targetAngle < -45 && targetAngle > -135) {
+            //Debug.Log("Mouse Down");
+        } else if(targetAngle < 45 && targetAngle > -135) {
+            //Debug.Log("Mouse Left");
+        } else if((targetAngle > 135) || (targetAngle < -135 )){ 
+            //Debug.Log("Mouse Right");
+        }
+}
 
 
     public IEnumerable PlayMusicAnimation() {
@@ -121,7 +116,16 @@ public class Mouse   : MonoBehaviour {
         }
     }
 
-    
+
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "Enemy") {
+            this.Flee();
+        }
+
+    }
+
 
 
     public void Flee() {
