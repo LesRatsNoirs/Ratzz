@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour {
         GM = GameObject.Find("GameManager");
 	}
 	
+
+
 	// Update is called once per frame
 	void Update () {
         TimeLeft -= Time.deltaTime;
