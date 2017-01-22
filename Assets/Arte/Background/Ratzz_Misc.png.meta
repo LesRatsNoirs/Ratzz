@@ -1,0 +1,353 @@
+fileFormatVersion: 2
+guid: 1360369ed1a83614fab7ee4ab72adda1
+timeCreated: 1485064193
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ratzz_Bueiro
+    21300002: "Ratzz_Pr\xE9dio_teto"
+    21300004: "Ratzz_Pr\xE9dio_teto_Janela"
+    21300006: "Ratzz_Pr\xE9dio_teto_Sem_Janela"
+    21300008: "Ratzz_Pr\xE9dio_Frente"
+    21300010: "Ratzz_Pr\xE9dio_Lateral"
+    21300012: "Pe\xE7a_misc"
+    21300014: Ratzz_Misc_1
+    21300016: Ratzz_Misc_2
+    21300018: Ratzz_Misc_3
+    21300020: Ratzz_Misc_4
+    21300022: Ratzz_Misc_5
+    21300024: Ratzz_Misc_6
+    21300026: Ratzz_Misc_7
+    21300028: Ratzz_Oficina_teto
+    21300030: Ratzz_Oficina_Frente
+    21300032: "Port\xE3o_Aberto"
+    21300034: "Port\xE3o_Fechado"
+    21300036: "Ch\xE3o"
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Ratzz_Pr\xE9dio_teto"
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 3446
+        width: 783
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 48, y: 42, z: 50, w: 135}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Ratzz_Pr\xE9dio_teto_Janela"
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2994
+        width: 783
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 46, y: 306, z: 50, w: 7}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Ratzz_Pr\xE9dio_teto_Sem_Janela"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 3235
+        width: 783
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 21, y: 27, z: 21, w: 17}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Ratzz_Pr\xE9dio_Frente"
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2824
+        width: 620
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 260, y: 0, z: 251, w: 12}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Ratzz_Pr\xE9dio_Lateral"
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 3065
+        width: 620
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 18, z: 22, w: 11}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Pe\xE7a_misc"
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2072
+        width: 1279
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 451, y: 72, z: 769, w: 60}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_1
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 1779
+        width: 1263
+        height: 1224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 454, y: 315, z: 656, w: 87}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1094
+        width: 899
+        height: 758
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 373, y: 281, z: 144, w: 278}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_3
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 663
+        width: 1220
+        height: 787
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 104, y: 289, z: 266, w: 99}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_4
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 949
+        width: 1220
+        height: 1073
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 326, y: 316, z: 313, w: 347}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_5
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 76
+        width: 720
+        height: 631
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 200, y: 107, z: 139, w: 148}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 336
+        width: 720
+        height: 631
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 257, y: 226, z: 145, w: 119}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Misc_7
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 97
+        width: 1258
+        height: 517
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 246, y: 133, z: 118, w: 286}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Oficina_teto
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 3564
+        width: 622
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 35, z: 21, w: 31}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ratzz_Oficina_Frente
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 3260
+        width: 622
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 192, y: 59, z: 191, w: 63}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Port\xE3o_Aberto"
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 3495
+        width: 314
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 23, y: 13, z: 20, w: 90}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Port\xE3o_Fechado"
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 3263
+        width: 303
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 11, z: 16, w: 13}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Ch\xE3o"
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 2282
+        width: 1219
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 298, y: 135, z: 286, w: 132}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
