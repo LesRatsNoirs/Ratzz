@@ -57,8 +57,8 @@ public class Mouse   : MonoBehaviour {
         Vector3 moveToward;
         if (Bueiro != null) {
             moveToward = Bueiro.transform.position;
-            range = 99;
-            range2 = 99;
+            range = 8;
+            range2 = 8;
             stop = 0;
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
             previousMouse = null;
@@ -108,10 +108,14 @@ public class Mouse   : MonoBehaviour {
 
         if (distance <= range && distance > stop) {
             transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
-            player.AddMouseOnPlayer(this);
+            if(Bueiro != null) {
+                player.AddMouseOnPlayer(this);
+            }
             
             isInPlayer = true;
         }
+
+        
 
 
         float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
@@ -145,6 +149,7 @@ public class Mouse   : MonoBehaviour {
 
 
     public void removeMouse() {
+        gameObject.SetActive(false);
         Destroy(gameObject);
     }
     /**

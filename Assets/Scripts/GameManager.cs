@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame() {
         //TODO AddScore
+        
         SceneManager.LoadScene("EndGame");
     }
     
