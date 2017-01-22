@@ -24,6 +24,9 @@ public class Ammo : MonoBehaviour {
     }
 
     private void OnCollisionBegin2D(Collision2D collision) {
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Player") {
+            //TODO Tirar Ratos
+            Destroy(gameObject);
+        }
     }
 }
