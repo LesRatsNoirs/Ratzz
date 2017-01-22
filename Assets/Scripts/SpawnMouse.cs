@@ -23,6 +23,5 @@ public class SpawnMouse : MonoBehaviour {
 
     public void Spawn() {
         RandomNumber = Random.Range(0f, 10f);
-        Debug.Log("deu isso: " + RandomNumber);
     }
 }

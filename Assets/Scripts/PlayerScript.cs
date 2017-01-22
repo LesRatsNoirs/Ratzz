@@ -14,41 +14,41 @@ public class PlayerScript : MonoBehaviour {
     public Sprite SpriteDown;
     public Sprite SpriteUp;
 
-    private float locationMod = 15f;
-    public Queue<Vector2> lastPositions;
+
+    public List<Mouse> mouseList;
 
     public float speed;
 
+    public Animator animator;
+
+    private Mouse currentLastMouse;
+
+
     // Use this for initialization
     void Start () {
-        
         Sr = GetComponent<SpriteRenderer>();
-        Sr.sortingOrder = 3;
-
-        //List of references of last positions
-        lastPositions = new Queue<Vector2>();
-
-        
-
-        Debug.Log("Position: "+ transform.position);
+        mouseList = new List<Mouse>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (lastPositions == null) return;
+   
         MoveX = Input.GetAxis("Horizontal");
         MoveY = Input.GetAxis("Vertical");
         Rb = GetComponent<Rigidbody2D>();
         Rb.velocity = new Vector2(MoveX * MaxVelocity * Time.deltaTime, MoveY * MaxVelocity * Time.deltaTime);
-
+       
         if (MoveX != 0) {
             if (MoveX > 0) {
                 Sr.sprite = SpriteLeft;
                 Sr.flipX = true;
+                //animator.SetTrigger("Left");
+                
             }
             else {
                 Sr.sprite = SpriteLeft;
                 Sr.flipX = false;
+                //animator.SetTrigger("Left");
             }
         }
         else {
@@ -56,25 +56,20 @@ public class PlayerScript : MonoBehaviour {
                 if (MoveY > 0) {
                     Sr.sprite = SpriteUp;
                     Sr.flipX = false;
+                    //animator.SetTrigger("Up");
                 }
                 else {
                     Sr.sprite = SpriteDown;
                     Sr.flipX = false;
+                    //animator.SetTrigger("Down");
                 }
-            }
-        }
-
-        Vector2 newPosition = new Vector2(transform.position.x , transform.position.y);
-
-        if (!lastPositions.Contains(newPosition)) {
-            lastPositions.Enqueue(newPosition);
-            if (lastPositions.Count > 13) {
-                lastPositions.Dequeue();
             }
         }
     }
 
-
+    //Isometric volume
+    //TODO Retirar quando confirmado que nao 'e mais necessario
+    /*
     private void OnTriggerEnter2D(Collider2D collision) {
         SpriteRenderer srPlayer = GetComponent<SpriteRenderer>();
 
@@ -82,9 +77,6 @@ public class PlayerScript : MonoBehaviour {
         SpriteRenderer srBuilding = buildingObject.GetComponent<SpriteRenderer>();
         float positionY = srBuilding.transform.position.y;
 
-        //TODO Verificar o pivot se influencia
-        //topo
-        //Bottom
         if (transform.position.y > positionY) {
             srPlayer.sortingOrder = srBuilding.sortingOrder - 1;
         }
@@ -95,6 +87,35 @@ public class PlayerScript : MonoBehaviour {
             srPlayer.sortingOrder = srBuilding.sortingOrder + 1;
         }
     }
+    */
+    void PlayMiceAudioAnimation() {
+        foreach (Mouse m in mouseList) {
+            m.PlayMusicAnimation();
+        }
+    }
+
+
+    public void AddMouseOnPlayer(Mouse mouse) {
+        if (!mouseList.Contains(mouse)) {
+            mouse.previousMouse = currentLastMouse;
+            currentLastMouse = mouse;
+            this.mouseList.Add(mouse);
+        }
+        //Debug.Log(mouse.name + " " + mouse.previousMouse.name);
+    }
+
+
+    public void LooseAllMices() {
+        //Play ANIM Lost all mices
+        foreach(Mouse m in this.mouseList) {
+            m.Flee();
+        }
+
+        this.mouseList.Clear();
+    }
+
+
+
 
     public static implicit operator PlayerScript(GameObject v) {
         throw new NotImplementedException();
