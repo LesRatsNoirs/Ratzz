@@ -16,19 +16,17 @@ public class SpawnMouse : MonoBehaviour {
     public GameObject LargeMouse;
     public static bool CanCreate = false;
     public GameObject[] SpawnPoint;
+    private int i = 0;
 
 
 
     // Use this for initialization
     void Start(){
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
+        while (i <= 7) {
+            WhereToSpawn();
+            i++;
+        }
+
     }
 
     // Update is called once per frame
@@ -37,7 +35,7 @@ public class SpawnMouse : MonoBehaviour {
 
     public void WhereToSpawn() {
         do {
-            Place = Random.Range(0, 4);
+            Place = Random.Range(0, 13);
             CanCreate = SpawnPoint[Place].GetComponent<Point>().CanCreateHere;
         } while (!CanCreate);
         Spawn(Place);
