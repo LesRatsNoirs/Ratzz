@@ -30,7 +30,7 @@ public class SpawnMouse : MonoBehaviour {
 
     public void WhereToSpawn() {
         do {
-            Place = Random.Range(0, 4);
+            Place = Random.Range(0, 13);
             CanCreate = SpawnPoint[Place].GetComponent<Point>().CanCreateHere;
         } while (!CanCreate);
         Spawn(Place);

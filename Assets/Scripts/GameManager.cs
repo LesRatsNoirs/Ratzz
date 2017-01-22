@@ -14,6 +14,12 @@ public class GameManager : MonoBehaviour {
     void Start() {
         GetComponent<SpawnMouse>().WhereToSpawn();
         GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
     }
     
 }
