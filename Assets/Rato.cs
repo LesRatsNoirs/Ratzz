@@ -7,63 +7,56 @@ public class Rato : MonoBehaviour {
     public GameObject playerObject;
     private PlayerScript player;
 
-    private Rigidbody2D Rb;
+
+
+    Transform target; //the enemy's target
+    int moveSpeed = 3; //move speed
+    int rotationSpeed = 3; //speed of turning
+    float range =3;
+    float range2 = 3;
+    float stop = 1f;
+
+    private Rigidbody2D rb;
+
+    Transform transform;
+
 
     public int MaxVelocity = 200;
 
-    // Use this for initialization
-    void Start () {
-        player = playerObject.GetComponent<PlayerScript>();
-        //TODO RETIRAR ISSO DAQUI.
+    void Awake() {
+       
+    }
 
-	}
+    void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        transform = rb.transform;
+    }
 
-    
-	
-	// Update is called once per frame
-	void Update () {
-        if (player.lastPositions == null || player.lastPositions.Count == 0) return;
+    void Update() {
+       
+        if (playerObject == null) return;
+        target = playerObject.transform;
 
-        Vector2 pos = player.lastPositions.Peek();
-
-        transform.position = pos;
-  /**
-   *       pos = pos.normalized;
-
-        float MoveX = pos.x;
-        float MoveY = pos.y;
-
-        Rb = GetComponent<Rigidbody2D>();
-
-        Rb.velocity = new Vector2(MoveX * MaxVelocity * Time.deltaTime, MoveY * MaxVelocity * Time.deltaTime);
-        */
-        /*
-        if (MoveX != 0) {
-            if (MoveX > 0) {
-                Sr.sprite = SpriteLeft;
-                Sr.flipX = true;
-            }
-            else {
-                Sr.sprite = SpriteLeft;
-                Sr.flipX = false;
-            }
+        //rotate to look at the player
+        float distance = Vector3.Distance(transform.position, target.position);
+        if (distance <= range2 && distance >= range) {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
         }
-        
-        else {
-        
-        if (MoveY != 0) {
-                if (MoveY > 0) {
-                    Sr.sprite = SpriteUp;
-                    Sr.flipX = false;
-                }
-                else {
-                    Sr.sprite = SpriteDown;
-                    Sr.flipX = false;
-                }
-            }
+
+
+        else if (distance <= range && distance > stop) {
+
+            //move towards the player
+           transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
+
+           transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
-        */
+        else if (distance <= stop) {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
+        }
 
-	}
+        
 
+    }
 }
+     

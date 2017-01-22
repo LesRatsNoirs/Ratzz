@@ -14,11 +14,10 @@ public class PlayerScript : MonoBehaviour {
     public Sprite SpriteDown;
     public Sprite SpriteUp;
 
-    private int locationCount = 0;
     private float locationMod = 15f;
     public Queue<Vector2> lastPositions;
 
-    
+    public float speed;
 
     // Use this for initialization
     void Start () {
@@ -36,6 +35,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (lastPositions == null) return;
         MoveX = Input.GetAxis("Horizontal");
         MoveY = Input.GetAxis("Vertical");
         Rb = GetComponent<Rigidbody2D>();
