@@ -10,7 +10,6 @@ public class BuildingComponent : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Build Position: " + transform.position);
 	}
 	
 	// Update is called once per frame
