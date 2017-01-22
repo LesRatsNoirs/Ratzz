@@ -55,8 +55,6 @@ public class Rato : MonoBehaviour {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position), rotationSpeed * Time.deltaTime);
         }
 
-        
-
     }
 }
      
