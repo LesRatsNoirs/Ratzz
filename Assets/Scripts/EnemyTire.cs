@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: tocar audio quando virar
 public class EnemyTire : MonoBehaviour {
 
     private Rigidbody2D Rb;
