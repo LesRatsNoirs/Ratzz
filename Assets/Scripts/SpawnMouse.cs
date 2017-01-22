@@ -20,12 +20,19 @@ public class SpawnMouse : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start(){
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
+    }
+
+    // Update is called once per frame
+    void Update () {
 	}
 
     public void WhereToSpawn() {

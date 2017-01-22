@@ -2,18 +2,34 @@
 using System.Collections.Generic;
 using Random = System.Random;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public static GameManager Instancia;
+    public static GameManager instance;
 
     void Awake(){
-        Instancia = this;
+        if (instance == null) {
+            instance = this;
+        } else {
+            if (instance != this) {
+                Destroy(gameObject);
+            }
+        }     
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start() {
-        GetComponent<SpawnMouse>().WhereToSpawn();
-        GetComponent<SpawnMouse>().WhereToSpawn();
+
+    }
+
+    public void StartGame() {
+        //SceneManager.LoadScene("Game");
+    }
+
+    public void EndGame() {
+        //TODO AddScore
+        SceneManager.LoadScene("EndGame");
     }
     
 }
