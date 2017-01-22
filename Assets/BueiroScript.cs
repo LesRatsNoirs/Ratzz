@@ -25,4 +25,12 @@ public class BueiroScript : MonoBehaviour {
             m.removeMouse();
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if(collision.gameObject.tag == "Player") {
+            PlayerScript playerScript = collision.gameObject.GetComponent<PlayerScript>();
+            playerScript.FoundSewer(null);
+        }
+        
+    }
 }

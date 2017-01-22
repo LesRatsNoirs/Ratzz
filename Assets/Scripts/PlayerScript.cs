@@ -100,6 +100,7 @@ public class PlayerScript : MonoBehaviour {
 
 
     public void AddMouseOnPlayer(Mouse mouse) {
+        Debug.Log("ADDING MOUSE");
         if (!mouseList.Contains(mouse)) {
             mouse.previousMouse = currentLastMouse;
             currentLastMouse = mouse;

@@ -25,7 +25,7 @@ public class Mouse   : MonoBehaviour {
     int rotationSpeed = 3; //speed of turning
     float range = 3;
     float range2 = 3;
-    float stop = 1f;
+    float stop = 2f;
 
     public float Health = 100.0f;
 
@@ -56,7 +56,6 @@ public class Mouse   : MonoBehaviour {
 
         Vector3 moveToward;
         if (Bueiro != null) {
-            Debug.Log("Bueiro");
             moveToward = Bueiro.transform.position;
             range = 99;
             range2 = 99;
@@ -68,13 +67,21 @@ public class Mouse   : MonoBehaviour {
 
         if (!isInPlayer && previousMouse == null) {
             moveToward = player.transform.position;
+            
         }
         else {
             if (previousMouse != null && previousMouse != this) {
                 moveToward = previousMouse.transform.position;
+             
             }
             else {
-                moveToward = player.transform.position;
+                if(previousMouse != null) {
+                    moveToward = previousMouse.transform.position;
+                    
+                } else {
+                    moveToward = player.transform.position;
+                  
+                }
             }
         }
 
@@ -100,11 +107,9 @@ public class Mouse   : MonoBehaviour {
         Vector3 target = moveDirection * moveSpeed + currentPosition;
 
         if (distance <= range && distance > stop) {
-            transform.position = Vector3.Slerp(currentPosition, target, Time.deltaTime);
-            if (Bueiro != null) {
-                player.AddMouseOnPlayer(this);
-            }
-
+            transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
+            player.AddMouseOnPlayer(this);
+            
             isInPlayer = true;
         }
 
@@ -142,13 +147,13 @@ public class Mouse   : MonoBehaviour {
     public void removeMouse() {
         Destroy(gameObject);
     }
-
+    /**
     private void OnTriggerStay2D(Collider2D collision) {
-        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Enemy") {
             this.Flee();
         }
     }
+    */
     
 
 
