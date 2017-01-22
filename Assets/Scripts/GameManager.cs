@@ -15,5 +15,9 @@ public class GameManager : MonoBehaviour {
         GetComponent<SpawnMouse>().WhereToSpawn();
         GetComponent<SpawnMouse>().WhereToSpawn();
     }
+
+    public void EndGame() {
+        //pegar score e ir pra scene end game;
+    }
     
 }
