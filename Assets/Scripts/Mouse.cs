@@ -109,14 +109,6 @@ public class Mouse   : MonoBehaviour {
     }
 
 
-    public void TakeDamage(float damageAmmount) {
-        this.Health -= damageAmmount;
-        if(Health <= 0) {
-            //TODO: GAME OVER
-        }
-    }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Debug.Log(collision.gameObject.tag);
@@ -135,7 +127,7 @@ public class Mouse   : MonoBehaviour {
         int y = new Random().Next(0, 1);
         int z = new Random().Next(0, 1);
         transform.position += new Vector3(x, y, z);
-        Destroy(this);
+        Destroy(gameObject,2);
     }
 
 

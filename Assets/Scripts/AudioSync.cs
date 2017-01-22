@@ -12,7 +12,9 @@ public class AudioSync : MonoBehaviour {
     public AudioSource slave;
 
     void Update() {
-        slave.PlayScheduled(1);
+        
+        float timeSinceLevel = Time.timeSinceLevelLoad;
+        slave.PlayScheduled(timeSinceLevel + 10);
         slave.timeSamples = master.timeSamples;
     }
 }
