@@ -12,11 +12,13 @@ public class TesteMovimentacao : MonoBehaviour {
     public Sprite SpriteLeft;
     public Sprite SpriteDown;
     public Sprite SpriteUp;
+    public Animator AnimatorPlayer;
 
 
     // Use this for initialization
     void Start () {
         Sr = GetComponent<SpriteRenderer>();
+        AnimatorPlayer = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -28,24 +30,35 @@ public class TesteMovimentacao : MonoBehaviour {
 
         if (MoveX != 0) {
             if (MoveX > 0) {
-                Sr.sprite = SpriteLeft;
-                Sr.flipX = true;
+                AnimatorPlayer.SetBool("Right", true);
+                //Sr.sprite = SpriteLeft;
+                //Sr.flipX = true;
             } else {
-                Sr.sprite = SpriteLeft;
-                Sr.flipX = false;
+                AnimatorPlayer.SetBool("Left", true);
+                //Sr.sprite = SpriteLeft;
+                //Sr.flipX = false;
             }
         } else {
             if (MoveY != 0) {
                 if (MoveY > 0) {
-                    Sr.sprite = SpriteUp;
-                    Sr.flipX = false;
+                    AnimatorPlayer.SetBool("Up",true);
+                    //Sr.sprite = SpriteUp;
+                    //Sr.flipX = false;
                 } else {
-                    Sr.sprite = SpriteDown;
-                    Sr.flipX = false;
+                    AnimatorPlayer.SetBool("Down", true);
+                    //Sr.sprite = SpriteDown;
+                    //Sr.flipX = false;
                 }
             }
         }
-       
+        if (MoveX == 0 && MoveY==0){
+            AnimatorPlayer.SetBool("Up",false);
+            AnimatorPlayer.SetBool("Down", false);
+            AnimatorPlayer.SetBool("Right", false);
+            AnimatorPlayer.SetBool("Left", false);
+
+        }
+
     }
    
 

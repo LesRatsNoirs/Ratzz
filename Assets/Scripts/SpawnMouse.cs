@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+
 public class SpawnMouse : MonoBehaviour {
+    
+
      
     public int CurrentMouses = 0;
-    private float RandomNumber;
-    public GameObject Mouse1;
-    public GameObject Mouse2;
-    public GameObject Mouse3;
+    private int Place;
+    private int TypeMouse;
+    public GameObject LightMouse;
+    public GameObject MediumMouse;
+    public GameObject LargeMouse;
+    public static bool CanCreate = false;
+    public GameObject[] SpawnPoint;
+
 
 
     // Use this for initialization
@@ -18,10 +26,28 @@ public class SpawnMouse : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Spawn();
 	}
 
-    public void Spawn() {
-        RandomNumber = Random.Range(0f, 10f);
+    public void WhereToSpawn() {
+        do {
+            Place = Random.Range(0, 4);
+            CanCreate = SpawnPoint[Place].GetComponent<Point>().CanCreateHere;
+        } while (!CanCreate);
+        Spawn(Place);
     }
+
+    public void Spawn(int num) {
+        TypeMouse = Random.Range(0,100);
+        if (TypeMouse <= 60) {
+            Instantiate(LightMouse, SpawnPoint[num].transform.position, Quaternion.identity);
+        } else {
+            if (TypeMouse <= 90) {
+                Instantiate(MediumMouse, SpawnPoint[num].transform.position, Quaternion.identity);
+            }  else {
+                Instantiate(LargeMouse, SpawnPoint[num].transform.position, Quaternion.identity);
+            }
+        }
+        SpawnPoint[num].GetComponent<Point>().CanCreateHere = false;
+    }
+
 }

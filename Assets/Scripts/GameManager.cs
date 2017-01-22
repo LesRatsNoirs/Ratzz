@@ -5,30 +5,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public static GameManager instance;
+    public static GameManager Instancia;
 
-    public static int Score = 0;
-
-    public void Awake() {
-        this.getInstance();
-
+    void Awake(){
+        Instancia = this;
     }
 
-    public static void Scoring(int score) {
-        Score += score;
-        Debug.Log("");
+    void Start() {
+        GetComponent<SpawnMouse>().WhereToSpawn();
+        GetComponent<SpawnMouse>().WhereToSpawn();
     }
-
-    // Singleton
-    private void getInstance() {
-        if(instance == null) {
-            instance = this;
-        } else {
-            if(instance != this) {
-                Destroy(gameObject);
-            }
-        }
-
-        DontDestroyOnLoad(gameObject);
-    }
+    
 }
