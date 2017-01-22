@@ -15,9 +15,9 @@ using Random = System.Random;
 
 public class Mouse   : MonoBehaviour {
 
-    public GameObject playerObject;
     private PlayerScript player;
 
+    public string MouseType;
 
 
     Transform target; //the enemy's target
@@ -40,30 +40,55 @@ public class Mouse   : MonoBehaviour {
     private Vector3 moveDirection;
     public float turnSpeed = 5;
 
+    public GameObject Bueiro;
+
     private void Awake() {
        
     }
 
     private void Start() {
         moveDirection = Vector3.right;
-        player = playerObject.GetComponent<PlayerScript>();
+        player = GameObject.FindObjectOfType<PlayerScript>();
+        
     }
+
+    private Vector3 GetMoveToward() {
+
+        Vector3 moveToward;
+        if (Bueiro != null) {
+            Debug.Log("Bueiro");
+            moveToward = Bueiro.transform.position;
+            range = 99;
+            range2 = 99;
+            stop = 0;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            previousMouse = null;
+            return moveToward;
+        }
+
+        if (!isInPlayer && previousMouse == null) {
+            moveToward = player.transform.position;
+        }
+        else {
+            if (previousMouse != null && previousMouse != this) {
+                moveToward = previousMouse.transform.position;
+            }
+            else {
+                moveToward = player.transform.position;
+            }
+        }
+
+
+        return moveToward;
+    }
+
 
     void Update() {
 
         // 1
         Vector3 currentPosition = transform.position;
         // 2
-        Vector3 moveToward;
-        if (!isInPlayer && previousMouse == null) { 
-            moveToward = playerObject.transform.position;
-        } else {
-            if(previousMouse != null && previousMouse != this) {
-                moveToward = previousMouse.transform.position;
-            } else {
-                moveToward = playerObject.transform.position;
-            }
-        }
+        Vector3 moveToward = GetMoveToward();
 
         // 4
         moveDirection = moveToward - currentPosition;
@@ -75,28 +100,33 @@ public class Mouse   : MonoBehaviour {
         Vector3 target = moveDirection * moveSpeed + currentPosition;
 
         if (distance <= range && distance > stop) {
-            transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
-            player.AddMouseOnPlayer(this);
-            
+            transform.position = Vector3.Slerp(currentPosition, target, Time.deltaTime);
+            if (Bueiro != null) {
+                player.AddMouseOnPlayer(this);
+            }
+
             isInPlayer = true;
         }
 
 
         float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        
+
         //TODO: Place animation for mouse
 
-        if(targetAngle > 45 && targetAngle < 135) {
+        if (targetAngle > 45 && targetAngle < 135) {
             //Debug.Log("Mouse UP");
-            
-        } else if (targetAngle < -45 && targetAngle > -135) {
+
+        }
+        else if (targetAngle < -45 && targetAngle > -135) {
             //Debug.Log("Mouse Down");
-        } else if(targetAngle < 45 && targetAngle > -135) {
+        }
+        else if (targetAngle < 45 && targetAngle > -135) {
             //Debug.Log("Mouse Left");
-        } else if((targetAngle > 135) || (targetAngle < -135 )){ 
+        }
+        else if ((targetAngle > 135) || (targetAngle < -135)) {
             //Debug.Log("Mouse Right");
         }
-}
+    }
 
 
     public IEnumerable PlayMusicAnimation() {
@@ -109,14 +139,17 @@ public class Mouse   : MonoBehaviour {
     }
 
 
+    public void removeMouse() {
+        Destroy(gameObject);
+    }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerStay2D(Collider2D collision) {
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Enemy") {
             this.Flee();
         }
-
     }
+    
 
 
 

@@ -16,7 +16,13 @@ public class BueiroScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.tag == "Player") {
-            PlayerScript playerScript = gameObject.GetComponent<PlayerScript>();
+            PlayerScript playerScript = collision.gameObject.GetComponent<PlayerScript>();
+            playerScript.FoundSewer(collision.gameObject);
+        }
+        if(collision.gameObject.tag == "Mouse") {
+            Debug.Log("Mouse");
+            Mouse m = collision.GetComponent<Mouse>();
+            m.removeMouse();
         }
     }
 }

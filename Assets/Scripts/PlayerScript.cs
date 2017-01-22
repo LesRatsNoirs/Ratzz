@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour {
     public Sprite SpriteDown;
     public Sprite SpriteUp;
 
+    public float Score = 0.0f;
+
 
     public List<Mouse> mouseList;
 
@@ -22,6 +24,8 @@ public class PlayerScript : MonoBehaviour {
     public Animator animator;
 
     private Mouse currentLastMouse;
+
+
 
 
     // Use this for initialization
@@ -104,10 +108,26 @@ public class PlayerScript : MonoBehaviour {
         //Debug.Log(mouse.name + " " + mouse.previousMouse.name);
     }
 
+    public void FoundSewer(GameObject Sewer) {
+        foreach (Mouse m in mouseList) {
+            m.Bueiro = Sewer;
+
+            if (m.MouseType == "Light") {
+                Score += 10;
+            }
+            else if (m.MouseType == "Medium") {
+                Score += 20;
+            }
+            else if (m.MouseType == "Large")
+                Score += 30;
+        }
+        
+    }
+
 
     public void LooseAllMices() {
         //Play ANIM Lost all mices
-        foreach(Mouse m in this.mouseList) {
+        foreach(Mouse m in mouseList) {
             m.Flee();
         }
 
