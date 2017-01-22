@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour {
 
-    public float AmmoVelocity =10;
+    public float AmmoVelocity = 10;
     private Rigidbody2D Rb;
     public float rot;
 
-    public float duration = 2f;
-    private float currentTime;
+    public float ammoDuration = 2f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() {
         Rb = GetComponent<Rigidbody2D>();
-        currentTime = Time.timeSinceLevelLoad;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        Rb.velocity = transform.right * AmmoVelocity;
-        Debug.Log(transform.forward);
-        transform.Rotate(new Vector3(0, 0, rot));
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
+    // Update is called once per frame
+    void Update() {
+        Rb.velocity = transform.right * AmmoVelocity;
+        transform.Rotate(new Vector3(0, 0, rot));
+        Destroy(gameObject, ammoDuration);
+
+    }
+
+    private void OnCollisionBegin2D(Collision2D collision) {
         Destroy(gameObject);
     }
 }
