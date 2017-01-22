@@ -8,7 +8,7 @@ public class Point : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         CanCreateHere = true;
         
     }
